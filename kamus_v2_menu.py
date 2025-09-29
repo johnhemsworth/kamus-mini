@@ -5,6 +5,7 @@ Tujuan:
 - Tambahkan menu sederhana: cari arti, lihat semua, keluar.
 """
 
+
 def tampilkan_semua(kamus: dict) -> None:
     """Cetak semua pasangan English -> Indonesia."""
     if not kamus:
@@ -14,14 +15,20 @@ def tampilkan_semua(kamus: dict) -> None:
     for en in sorted(kamus):
         print(f"- {en} -> {kamus[en]}")
 
+
 def main():
     # Data awal sederhana
     kamus = {
         "cat": "kucing",
         "dog": "anjing",
+        "like": "suka",
         "book": "buku",
-        "apple": "apel",
-        "school": "sekolah",
+        "run": "lari",
+        "eat": "makan",
+        "drink": "minum",
+        "beautiful": "indah",
+        "fast": "cepat",
+        "happy": "bahagia",
     }
 
     print("=== Kamus Mini V2 ===")
@@ -46,6 +53,7 @@ def main():
             break
         else:
             print("Pilihan tidak valid.")
+
 
 if __name__ == "__main__":
     main()
