@@ -11,6 +11,7 @@ def main():
         "book": "buku",
         "apple": "apel",
         "school": "sekolah",
+        "Like": "suka",
     }
     kata = input("Masukkan kata (English): ").strip().lower()
     if kata in kamus:
