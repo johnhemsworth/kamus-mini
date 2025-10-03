@@ -1,125 +1,118 @@
----
-# 🐍 Mini Kamus EN ↔ ID
+# 🧠 Kamus Mini (Python Project)
 
-Proyek belajar Python dasar dengan membuat **kamus mini English ↔ Indonesia**.  
-Dibangun **bertahap** dari level entry sampai fitur lebih lengkap.
+> 📚 *Project pembelajaran Python dari level entry → intermediate.*
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
-![Status](https://img.shields.io/badge/Status-Learning-green)
-![Version](https://img.shields.io/badge/Version-v5%20Ready-orange)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
-![By Uncle John](https://img.shields.io/badge/By-Uncle%20John-blue)
----
-## 🎯 Tujuan
-
-- Latihan dasar Python: variabel, dictionary, loop, fungsi, file JSON, OOP.
-- Belajar Git & GitHub workflow: commit, push, versioning.
-- Membuat aplikasi nyata walau sederhana.
+Kamus Mini ini adalah latihan nyata untuk belajar **Python dasar** hingga pengelolaan data menggunakan **file JSON**.
+Setiap versi memperkenalkan fitur baru — dari yang sederhana hingga yang semakin canggih.
 
 ---
 
-## 🚀 Versi & Progress
+## 🚀 Versi & Fitur
 
-- ✅ **v1**: Basic lookup (EN → ID, sekali jalan)
-- ✅ **v2**: Menu & loop (search/list/exit)
-- ✅ **v3**: Tambah entri (in-memory)
-- ✅ **v4**: Persistence JSON (save/load data)
-- ✅ **v5**: Bilingual search (EN ↔ ID)
-- 🔜 **v6**: Edit & hapus entri
-- 🔜 **v7**: POS tagging (noun, verb, adj, adv)
-- 🔜 **v8**: Migrasi schema + fitur lanjutan
+|     Versi     | Fitur Utama    | Deskripsi                                                                            |
+| :------------: | -------------- | ------------------------------------------------------------------------------------ |
+|  **v1**  | Basic Lookup   | Pencarian arti kata sederhana (EN → ID).                                            |
+|  **v2**  | Menu & Loop    | Program interaktif dengan menu pilihan.                                              |
+|  **v3**  | Dua Arah       | Pencarian EN → ID dan ID → EN.                                                     |
+|  **v4**  | Persisten JSON | Data disimpan otomatis ke file `kamus.json`.                                       |
+|  **v5**  | Bilingual      | Terjemahan dua arah dengan update ke file JSON.                                      |
+| 🆕**v6** | Edit & Delete  | Menambah, mengedit, dan menghapus entri dari kamus dengan data yang tetap tersimpan. |
 
 ---
 
-## 🛠️ Cara Menjalankan
+## ⚙️ Cara Menjalankan
 
-Clone repo & masuk ke folder:
+Pastikan sudah berada di folder project:
+
+```
+D:\Python\Project\2. Mini Kamus
+```
+
+Jalankan sesuai versi yang ingin digunakan:
 
 ```bash
-git clone https://github.com/johnhemsworth/kamus-mini.git
-cd kamus-mini
-
-
----
-```
-
-Jalankan program:
-
-```
-# versi 1
+# versi 1 - lookup sederhana
 python kamus_v1_basic.py
 
-# versi 2
+# versi 2 - menu & loop
 python kamus_v2_menu.py
 
-# versi 3
-python kamus_v3_tambah.py
+# versi 3 - dua arah
+python kamus_v3_bilingual.py
 
-# versi 4 (persisten JSON)
+# versi 4 - simpan otomatis (JSON)
 python kamus_v4_persisten.py
 
-# versi 5 (bilingual EN <-> ID)
+# versi 5 - kamus bilingual lengkap
 python kamus_v5_bilingual.py
 
-
+# versi 6 - edit & hapus entri
+python kamus_v6_edit_delete.py
 ```
 
-📖 Contoh Output (v5)
+---
 
+## 🧩 Struktur Data (contoh isi `kamus.json`)
+
+```json
+{
+  "cat": "kucing",
+  "dog": "anjing",
+  "run": "lari",
+  "book": "buku",
+  "beautiful": "indah"
+}
 ```
-=== Kamus Mini V5 ===
+
+---
+
+## 🧱 Contoh Output (V6)
+
+```bash
+=== Kamus Mini V6 ===
 
 Menu:
 1. Cari arti (EN->ID)
-2. Cari arti (ID->EN)
-3. Lihat semua kosakata
-4. Tambah kata baru
-5. Keluar
-Pilih (1-5): 2
-Masukkan kata (Indonesia): rumah
-rumah -> house
+2. Lihat semua kosakata
+3. Tambah kata baru
+4. Edit entri
+5. Hapus entri
+6. Keluar
+Pilih (1-6): 2
 
-```
-
-🗂️ Struktur Project
-
-```
-kamus-mini/
-├── kamus_v1_basic.py       # versi 1, basic lookup
-├── kamus_v2_menu.py        # versi 2, menu & loop
-├── kamus_v3_tambah.py      # versi 3, tambah entri
-├── kamus_v4_persisten.py   # versi 4, save/load JSON
-├── kamus_v5_bilingual.py   # versi 5, bilingual EN<->ID
-├── kamus.json              # file data kosakata
-├── README.md               # dokumentasi project
-└── .gitignore
-
-```
-
-
-## 🤝 Cara Fork & Kontribusi
-
-1. Klik tombol **Fork** di kanan atas repo ini.
-2. Repo akan tersalin ke akun GitHub kamu.
-3. Clone repo hasil fork ke PC/laptop untuk belajar/modifikasi.
-4. Kalau ingin kontribusi balik, buat **Pull Request (PR)** ke repo ini.
-
-
-## 📌 Catatan
-
-Project ini dibuat untuk **pembelajaran pribadi** (entry → intermediate).
-
-Silakan **fork** / modifikasi sesuai kebutuhan 🚀
-
+=== Daftar Kosakata ===
+- cat -> kucing
+- dog -> anjing
+- book -> buku
 ```
 
 ---
 
-## 🔹 Cara Update di GitHub
-```powershell
-git add README.md
-git commit -m "docs: update README with v5 bilingual feature"
-git push
+## 🧠 Pembelajaran dari Project Ini
 
-```
+- ✅ Mengerti struktur `dict`, `list`, dan `loop` di Python
+- ✅ Belajar **input/output interaktif**
+- ✅ Menggunakan **file JSON** untuk penyimpanan data permanen
+- ✅ Belajar konsep **CRUD (Create, Read, Update, Delete)**
+- ✅ Latihan commit & version control menggunakan **Git + GitHub**
+
+---
+
+## 📌 Catatan
+
+Project ini dibuat untuk **pembelajaran pribadi (entry → intermediate)**.
+Silakan **fork / modifikasi / tambahkan fitur baru** sesuai kebutuhan 🚀
+
+---
+
+## 🧑‍💻 Author
+
+**John Hemsworth**
+📍 _“Belajar, Bangun, dan Berkarya — satu baris kode setiap hari.”_
+
+---
+
+## 🧾 Lisensi
+
+Lisensi bebas digunakan untuk tujuan pembelajaran dan pengembangan pribadi.
+Kredit tetap diberikan kepada pembuat asli bila digunakan secara publik 🙏
